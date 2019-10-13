@@ -191,8 +191,6 @@
         {
             var id = String(v.cur.bgIndex);
 
-            g.undress();
-
             v.list.forEach(
                 function(list, index)
                 {
@@ -201,7 +199,11 @@
                         g.dressPart(index, id);
 
                         v.list[index].select(id);
+
+                        return;
                     }
+                    g.dressPart(index, null);
+                    v.list[index].deselect();
                 });
         };
 
