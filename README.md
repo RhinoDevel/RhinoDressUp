@@ -1,6 +1,8 @@
 # RhinoDressUp
 Pure JavaScript game without any dependencies (no libraries used), where you dress up Manni the rhinoceros every way you want!
 
+[Play RhinoDressUp](http://RhinoDevel.github.io/RhinoDressUp "RhinoDressUp website")
+
 ![In-game screenshot](screenshot.jpg "RhinoDressUp in-game screenshot.")
 
 This works completely offline, just copy all the files to some folder on your device and open `index.html`.
