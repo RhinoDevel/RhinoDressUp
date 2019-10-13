@@ -7,29 +7,33 @@
 {
     'use strict';
 
-    var v = {};
+    window.addEventListener(
+        'load',
+        function()
+        {
+            var v = {};
 
-    v.ele = {};
-    v.ele.roomOne = document.createElement('div');
-    // v.ele.roomTwo = document.createElement('div');
+            v.ele = {};
+            v.ele.room = document.createElement('div');
+            v.ele.room.style.order = String(1);
+            v.ele.room.style.position = 'relative';
 
-    document.body.style.width = '100%';
-    document.body.style.height = '100%';
-    document.body.style.border = '0px none';
-    document.body.style.padding = '0px';
-    document.body.style.margin = '0px';
+            document.body.style.width = '100%';
+            document.body.style.height = '100%';
+            document.body.style.border = '0px none';
+            document.body.style.padding = '0px';
+            document.body.style.margin = '0px';
 
-    document.body.style.display = 'flex';
-    document.body.style['justify-content'] = 'center';
-    document.body.style['align-items'] = 'center';
+            document.body.style['background-color'] = 'black';
 
-    document.body.appendChild(v.ele.roomOne);
-    v.ele.roomOne.style.order = String(1);
-    v.ele.roomOne.style.position = 'relative';
-    // document.body.appendChild(v.ele.roomTwo);
-    // v.ele.roomTwo.style.order = String(2);
-    // v.ele.roomTwo.style.position = 'relative';
+            document.body.style.display = 'flex';
+            document.body.style['justify-content'] = 'center';
+            document.body.style['align-items'] = 'center';
 
-    RhinoDressUp.room.init(v.ele.roomOne);
-    // RhinoDressUp.room.init(v.ele.roomTwo);
+            document.body.appendChild(v.ele.room);
+
+            RhinoDressUp.roomLateInit();
+
+            RhinoDressUp.room.init(v.ele.room);
+        });
 }());
