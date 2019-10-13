@@ -34,8 +34,6 @@
                 h: document.body.clientHeight
             };
 
-            console.log(JSON.stringify(dev));
-
             if(dev.w / dev.h > c.dim.bgAbs.w / c.dim.bgAbs.h)
             {
                 return dev.h / c.dim.bgAbs.h;
